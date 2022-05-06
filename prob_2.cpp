@@ -2,9 +2,18 @@
 using namespace std;
 int main()
 {
-    int n,k,a,s=0;
+    int n,k,a,s,x;
     cin>>n>>k>>a;
-    s=(k%n)+1;
+    if (k%n==0){
+        x=n;
+    }
+    else {
+        x = k%n;
+    }
+    s= x + (a-1);
+    if (s>n){
+        s=s%n;
+    }
     cout<<s<<endl;
     return 0;
 }
