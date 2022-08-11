@@ -1,0 +1,40 @@
+#include<iostream>
+#include<algorithm>
+#include<vector>
+using namespace std;
+
+int main ()
+{
+    int i,j,k,t,m;
+    vector<int>pos;
+    for (i=1,j=1; i>0; i=i+j,j++)
+    {
+        pos.push_back(i);
+        //cout<<i<<endl;
+    }
+    //cout<<pos.size();
+    cin>>t;
+    int input[t];
+    for (i=0; i<t; i++)
+    {
+        cin>>input[i];
+    }
+    for (i=0; i<t; i++)
+    {
+//        m = 0;
+//        for (j=0;j<pos.size();j++){
+//            if (input[i]==pos[j]){
+//                cout<<1<<" ";
+//                m=1;
+//                break;
+//            }
+//        }
+//        if (m==0){
+//            cout<<0<<" ";
+//        }
+        bool exists = std::binary_search(pos.begin(), pos.end(), input[i]);
+        if(exists) cout<<1<<" ";
+        else cout<<0<<" ";
+    }
+    return 0;
+}
