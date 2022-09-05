@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    float v[15];
+    for (int i=0 ; i<15 ;i++)
+    {
+        cin>>v[i];
+    }
+    for (int i=0; i<15;  i++)
+    {
+       cout<<i+1<<"    =    "<<v[i]*2<<endl;
+    }
+    return 0;
+}
