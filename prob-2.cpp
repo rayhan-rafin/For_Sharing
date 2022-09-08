@@ -15,7 +15,7 @@ int main ()
         }
         else {
             first = line[i];
-            count = 0;
+            count = 1;
         }
         if (count>max_count){
             max_count = count;
